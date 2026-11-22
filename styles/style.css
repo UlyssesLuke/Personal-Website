@@ -5,16 +5,23 @@
   font-display: swap;
   src: url('Fonts/Anton-Regular.ttf') format('truetype');
 }
-html{
-	font-size: 1vw;
+
+@font-face {
+  font-family: 'OS';
+  src: url(Fonts/OpenSauceOne-Regular.ttf);
+}
+@font-face {
+  font-family: 'OS Bold';
+  src: url(Fonts/OpenSauceOne-ExtraBold.ttf);
 }
 body {
 	margin:0;
-  	-webkit-font-smoothing: none;
-  	-moz-osx-font-smoothing: grayscale;
 	font-family: 'Press Start 2P', monospace;
-  	font-size: 16px;
+  font-size: 1rem;
 	overflow-x: hidden;
+}
+html{
+  font-size: 125%;
 }
 .hero {
   display: flex;
@@ -34,14 +41,101 @@ body {
 }
 .wallet{
   position: relative;
-  width: 440px;
-  height: 275px;
+  width: 30rem;
+  height: 20rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
 }
 .cards{
   position: absolute;
   background-color: #2d2d2F;
   color: #ffffff; 
-  padding: 20px 24px;
-  border-radius: 10px;
-  transition: transform 0.6s ease;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  inset: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  font-family: 'Anton', sans-serif;
 }
+.card_footer{
+  display: flex;
+  flex-direction: column;
+}
+.card_footer a{
+  text-decoration: none;
+  color:#FFBE5C;
+  margin-right: 0.4rem;
+  display: flex;
+  font-family: 'OS', sans-serif;
+  font-size: 1rem;
+}
+.card_footer img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+  margin-right: 0.4rem;
+}
+.photo{
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-right: 1rem;
+  border-radius: 0.125rem;
+  object-fit: cover;
+  padding: 0.1rem;
+  background-color:#ffffff;
+}
+
+.card_body{
+  display: flex;
+}
+.cards h2{
+  margin: 0.125rem;
+  font-weight: 400;
+}
+.cards p{
+  margin: 0.125rem;
+}
+.cards dl{
+  margin: 0.125rem;
+}
+.cards dd{
+  margin: 0.125rem;
+  font-family: 'OS', sans-serif;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+.cards dt{
+  opacity: 0.8;
+  font-size: 0.75rem;
+  
+}
+.cards hr{
+ border: none;
+ border-top: 1px solid #ffffff;
+ margin: 0.75rem 0;;
+}
+.cards .next_card{
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.25rem;
+  font-size: 2rem;
+  font-family: 'Anton', sans-serif;
+  color: #FFBE5C;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.next_card:hover{
+  opacity: 0.8;
+  transform: rotate(4deg);
+  transition: 0.4s ease;
+}
+
+.cards[data-pos="0"] {z-index: 3;}
+.cards[data-pos="1"] {z-index: 2; transform: translate(1rem,-1rem) rotate(4deg); opacity: 0.8;}
+.cards[data-pos="2"] {z-index: 1; transform: translate(2rem,-2rem) rotate(8deg); opacity: 0.5;}
+.cards[data-pos="3"] {z-index: 0; opacity: 0;}
+
+.cards > * { transition: opacity 0.3s;}
+.cards:not([data-pos="0"]) > * {opacity: 0; }
+.cards:not([data-pos="0"]) {pointer-events: none;}
