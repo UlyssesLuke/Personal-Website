@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('Fonts/Anton-Regular.ttf') format('truetype');
+}
+html{
+	font-size: 1vw;
+}
+body {
+	margin:0;
+  	-webkit-font-smoothing: none;
+  	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Press Start 2P', monospace;
+  	font-size: 16px;
+	overflow-x: hidden;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 4rem;
+}
+.Text {
+  font-family: 'Anton', sans-serif;
+  font-size: 15rem;
+  line-height: 0.9;
+  text-align: left;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  color: #FFBE5C;
+}
+.wallet{
+  position: relative;
+  width: 440px;
+  height: 275px;
+}
+.cards{
+  position: absolute;
+  background-color: #2d2d2F;
+  color: #ffffff; 
+  padding: 20px 24px;
+  border-radius: 10px;
+  transition: transform 0.6s ease;
+}
