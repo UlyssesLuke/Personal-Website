@@ -16,7 +16,7 @@
 }
 body {
 	margin:0;
-	font-family: 'Press Start 2P', monospace;
+  font-family: 'OS', sans-serif;
   font-size: 1rem;
 	overflow-x: hidden;
 }
@@ -54,19 +54,33 @@ html{
   border-radius: 0.5rem;
   inset: 0;
   transition: transform 0.6s ease, opacity 0.6s ease;
-  font-family: 'Anton', sans-serif;
+  font-family: 'OS', sans-serif;
 }
 .card_footer{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+}
+.card_footer p{
+  opacity: 0.8;
+  font-size: 0.8rem;
+  letter-spacing: 0.025rem;
 }
 .card_footer a{
   text-decoration: none;
   color:#FFBE5C;
-  margin-right: 0.4rem;
-  display: flex;
+  display: inline-flex ; align-items: center;
   font-family: 'OS', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  /*border: solid #FFBE5C 0.05rem;*/
+  padding: 0.2rem 1rem;
+  margin-top: 0.2rem;
+  border-radius: 0.2rem;
+  transition: 0.2s ease;
+}
+.card_footer a:hover{
+  scale: 0.97;
+  opacity: 0.9;
+  transition: 0.2s ease;
 }
 .card_footer img {
   width: 1.5rem;
@@ -99,19 +113,23 @@ html{
 }
 .cards dd{
   margin: 0.125rem;
-  font-family: 'OS', sans-serif;
+  font-family: 'OS Bold', sans-serif;
   opacity: 0.9;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.01rem;
 }
 .cards dt{
-  opacity: 0.8;
-  font-size: 0.75rem;
+  opacity: 0.6;
+  font-size: 0.5rem;
+  letter-spacing: 0.025rem;
+  margin: 0.2rem;
   
 }
 .cards hr{
  border: none;
- border-top: 1px solid #ffffff;
+ border-top: 1px dashed #ffffff;
  margin: 0.75rem 0;;
+ opacity: 0.6;
 }
 .cards .next_card{
   position: absolute;
@@ -129,6 +147,7 @@ html{
   opacity: 0.8;
   transform: rotate(4deg);
   transition: 0.4s ease;
+  scale: 0.97;
 }
 
 .cards[data-pos="0"] {z-index: 3;}
