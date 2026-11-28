@@ -19,6 +19,9 @@ body {
   font-family: 'OS', sans-serif;
   font-size: 1rem;
 	overflow-x: hidden;
+  ::selection{
+  background-color: #ffc67c85; /* idk what colour to put */
+  }
 }
 html{
   font-size: 125%;
@@ -56,37 +59,11 @@ html{
   transition: transform 0.6s ease, opacity 0.6s ease;
   font-family: 'OS', sans-serif;
 }
-.card_footer{
-  display: inline-flex;
-  flex-direction: column;
-}
-.card_footer p{
-  opacity: 0.8;
-  font-size: 0.8rem;
-  letter-spacing: 0.025rem;
-}
-.card_footer a{
-  text-decoration: none;
-  color:#FFBE5C;
-  display: inline-flex ; align-items: center;
-  font-family: 'OS', sans-serif;
-  font-size: 0.9rem;
-  /*border: solid #FFBE5C 0.05rem;*/
-  padding: 0.2rem 1rem;
-  margin-top: 0.2rem;
-  border-radius: 0.2rem;
-  transition: 0.2s ease;
-}
-.card_footer a:hover{
-  scale: 0.97;
-  opacity: 0.9;
-  transition: 0.2s ease;
-}
-.card_footer img {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: 0.1rem;
-  margin-right: 0.4rem;
+.card_title{
+  font-family: 'OS Bold', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 0.225rem;
+  opacity: 0.99;
 }
 .photo{
   width: 7.5rem;
@@ -122,7 +99,7 @@ html{
   opacity: 0.6;
   font-size: 0.5rem;
   letter-spacing: 0.025rem;
-  margin: 0.2rem;
+  margin: 0.2rem 0rem; /* either 0.2rem 0rem (dt indent) OR 0.2rem 0.1rem (0 indent) OR 0.2rem 0.2rem (dd indent)*/
   
 }
 .cards hr{
@@ -130,6 +107,39 @@ html{
  border-top: 1px dashed #ffffff;
  margin: 0.75rem 0;;
  opacity: 0.6;
+}
+.card_footer{
+  display: inline; /* change maybe to inline if want it horizontal*/
+  flex-direction: column;
+}
+.card_footer p{
+  opacity: 0.8;
+  font-size: 0.8rem;
+  letter-spacing: 0.025rem;
+}
+.card_footer a{
+  text-decoration: none;
+  color:#FFC77C;
+  display: inline-flex ; align-items: center;
+  font-family: 'OS', sans-serif;
+  font-size: 0.8rem;
+  /*border: solid #FFBE5C 0.05rem;*/
+  padding: 0.2rem 1rem;
+  margin-top: 0.2rem;
+  border-radius: 0.2rem;
+  transition: 0.2s ease;
+  opacity: 1;
+}
+.card_footer a:hover{
+  scale: 0.97;
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+.card_footer img {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.1rem;
+  margin-right: 0.4rem;
 }
 .cards .next_card{
   position: absolute;
